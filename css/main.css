@@ -1,9 +1,16 @@
 /*date of creation: 12th of October, 2022
-       originally created by: Cabbage Sorter*/
-
+       originally created by: Cabbage Sorter
+       Analized by Gio*/
 /* M A I N  G R I D */
+
 html {
   margin: auto;
+  color-scheme: dark !important;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 @font-face {
@@ -90,14 +97,14 @@ body {
 }
 
 .header {
-  position: relative;
+  position: static;
   font-family: "blackcasperregular";
   font-size: x-large;
   padding: 5px;
   background-size: auto;
   text-shadow: 0.5em 0 0 rgba(150, 0, 0, 0.75),
-    -0.25em -0.05em 0 rgba(252, 248, 4, 0.75),
-    0.25em 0.05em 0 rgba(44, 247, 213, 0.75);
+              -0.25em -0.05em 0 rgba(252, 248, 4, 0.75),
+               0.25em 0.05em 0 rgba(44, 247, 213, 0.75);
   animation: glitch-h 128ms infinite;
 }
 
@@ -110,8 +117,8 @@ body {
   color: inherit;
 }
 .header span a:hover {
-  font-size: 60px;
   transition: none;
+  color: whitesmoke;
 }
 .header span a:active {
   transition: none;
@@ -152,69 +159,40 @@ body {
   animation: glitch-n 50ms infinite;
 }
 
-::-webkit-scrollbar {
-  display: none;
-}
+/* FOOTY BUSSINESS */
 
 .footer {
   grid-column: 1 / span 2;
   grid-row: 2 / 2;
   text-align: center;
 }
-.footer a:visited {
-  color: #1e9b28;
+
+.footer a:hover {
+  color: white;
+  animation: glitch-h 50ms infinite;
+}
+
+.silly-footer {
+  font-size: larger;
+  font-weight: bold;
+}
+
+.silly-footer a:link {
+  text-decoration: none;
 }
 
 .inspired {
   font-size: small;
   color: red;
 }
+
 .inspired a:link {
   text-decoration: none;
-  color: #48df54;
+  color: green;
  }
-.inspired a:hover {
-  font-size: small;
-  color: white;
-  animation: glitch-h 50ms infinite;
-}
 
-/* Marquee Bottom Scroll.   */
-/* Gio Was Here !!! */
-
-.marquee-parent {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  height: 20px;
-  font-size: large;
-  border: solid rgb(255, 0, 0) 1px;
-  text-align: center;
-  background-color: black;
-}
-.marquee-child {
-  display: block;
-  width: 100%;
-  /* width of your text div */
-  height: 20px;
-  /* height of your text div */
-  position: absolute;
-  animation: marquee 8s linear infinite; /* change 5s value to your desired speed */
-}
-.marquee-child:hover {
-  animation-play-state: paused;
-  cursor: pointer;
-}
-@keyframes marquee {
-  0% {
-    left: 100%;
-  }
-  100% {
-    left: -100% /* same as your text width */
-  }
-}
-
- /* Gio Ends Here  */
+ /* Gio was Here  */
+ /* The poes */
 
 .navbar li {
   list-style: square;
@@ -223,7 +201,7 @@ body {
   text-align: left;
 }
 .navbar li:hover {
-  color: #ffffff;
+  color: white;
   border: #ff0f0f solid 1px;
   text-decoration: line-through;
   animation: glitch-h 180ms infinite;
@@ -231,22 +209,6 @@ body {
 }
 .navbar p {
   font-weight: bold;
-}
-.navbar-image {
-  width: 80px;
-  margin: 0 auto;
-  display: block;
-  position: relative;
-  bottom: 4vh;
-  left: -30px;
-}
-.navbar-image-1 {
-  width: 80px;
-  margin: 0 auto;
-  display: block;
-  position: relative;
-  bottom: 19vh;
-  left: 35px;
 }
 
 /*M A I N  C O N T E N T  G R I D*/
@@ -279,91 +241,22 @@ body {
   background-color: var(--background-color);
   grid-column: 1 / span 2;
   grid-row: 2 / 2;
-  border: 1px solid #ce7e4b;
+  border: 1px solid red;
 }
 .main-content-img img {
   max-width: 100%;
 }
 
-.warning {
-  background-image: URL("https://cabbagesorter.neocities.org/pics/layout-3/bg8.gif");
-  grid-column: 3 / span 2;
-  grid-row: 2 / 2;
-  border: 1px dotted #ce7e4b;
-  margin: 10px;
-  padding: 10px;
-}
-.inner-warning {
-  height: 240px;
-  overflow-y: auto;
-  background-color: var(--background-color);
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-}
-.warning-divider {
-  background-image: url(https://cabbagesorter.neocities.org/pics/layout-3/divider1.gif);
-  width: 100%;
-  background-repeat: repeat-x;
-}
-
-.warning h3,
-.contact h3 {
-  color: #ce7e4b;
-}
-.contact {
-  grid-column: 1 / 1;
-  grid-row: 3 / 3;
-  padding: 10px;
-  margin: 10px;
-  border: 1px dotted #ce7e4b;
-  background-image: url("https://cabbagesorter.neocities.org/pics/layout-3/bg8.gif");
-}
-.inner-contact {
-  height: 240px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  background-color: var(--background-color);
-}
-
-.button-banner {
-  grid-column: 3 / span 2;
-  grid-row: 3 / 3;
-  text-align: center;
-  padding: 10px;
-  margin: 10px;
-  border: 1px dotted #ce7e4b;
-  background-image: url("https://cabbagesorter.neocities.org/pics/layout-3/bg8.gif");
-}
-.inner-button-banner {
-  height: 240px;
-  overflow-y: auto;
-  background-color: var(--background-color);
-}
-
-.main-content-img2 {
-  border: 1px solid #ce7e4b;
-  margin: 10px;
-  background-color: var(--background-color);
-  grid-column: 2 / 2;
-  grid-row: 3 / 3;
-  display: flex;
-}
-.main-content-img2 img {
-  max-width: 100%;
-}
-
 .page-updates {
+  scrollbar-width: none;
   background-color: black;
   height: auto;
   grid-column: 1 / span 4;
   grid-row: 4 / 4;
   overflow-y: auto;
   overflow-x: hidden;
-  margin-bottom: 2.5em;
+  margin-top: -2.3em;
+  margin-bottom: 1em;
   padding: 10px;
   border: 1px solid red;
 }
@@ -372,14 +265,26 @@ body {
   padding: 10px;
   border-bottom: darkred 1px solid;
 }
+
+.page-updates li :hover {
+  color: white;
+  animation: glitch-h 64ms infinite;
+}
+
 .page-updates p {
   font-weight: bold;
   padding: 5px;
 }
 
+.page-updates-heading {
+  border: red 1px solid;
+  text-align: center;
+  font-size: larger;
+}
+
 .main-content a {
   text-decoration: none;
-  color: #e7b38d;
+  color: darkred;
 }
 .navbar a {
   text-decoration: none;
