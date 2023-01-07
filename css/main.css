@@ -14,9 +14,23 @@ html {
 }
 
 @font-face {
-  font-family: "blackcasperregular";
+  font-family: "blackcasper-regular";
   src: url("../assets/fonts/blackcasper-webfont.woff2") format("woff2"),
-    url("../assets/fonts/blackcasper-webfont.woff") format("woff");
+       url("../assets/fonts/blackcasper-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "planetk-regular";
+  src: url("../assets/fonts/planetk-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "dotgothic16-regular";
+  src: url("../assets/fonts/dotgothic16-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -52,32 +66,32 @@ html {
 
 @keyframes glitch-n {
   0% {
-    text-shadow: 0.05em 0 0 rgb(202, 7, 7);
+    text-shadow: 0.05em 0 0 rgb(201, 142, 142);
   }
   14% {
-    text-shadow: 0.05em 0 0 rgb(233, 11, 11);
+    text-shadow: 0.05em 0 0 rgb(233, 155, 11);
   }
   15% {
-    text-shadow: -0.08em -0.025em 0 rgb(175, 9, 9);
+    text-shadow: -0.08em -0.025em 0 rgb(9, 156, 175);
   }
   49% {
     text-shadow: -0.05em -0.025em 0 rgb(165, 6, 6);
   }
   50% {
-    text-shadow: 0.025em 0.05em 0 rgb(196, 8, 8);
+    text-shadow: 0.025em 0.05em 0 rgb(8, 196, 108);
   }
   94% {
-    text-shadow: 0.065em 0.05em 0 rgb(194, 86, 36);
+    text-shadow: 0.065em 0.05em 0 rgb(36, 91, 194);
   }
   100% {
-    text-shadow: -0.025em 0 0 rgb(206, 16, 16);
+    text-shadow: -0.025em 0 0 rgb(177, 166, 166);
   }
 }
 
 :root {
   --background-color: black;
   --background-image: url(/assets/videos/main_static.png);
-  font-family: "Courier New", Courier, monospace;
+  font-family: "dotgothic16-regular";
   color: #ff0f0f;
 }
 
@@ -98,7 +112,7 @@ body {
 
 .header {
   position: static;
-  font-family: "blackcasperregular";
+  font-family: "planetk-regular";
   font-size: x-large;
   padding: 5px;
   background-size: auto;
@@ -231,8 +245,8 @@ body {
   -ms-overflow-style: none;
 }
 .welcome h1 {
-  font-weight: bold;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: lighter;
+  font-family: "planetk-regular";
 }
 
 .main-content-img {
@@ -289,4 +303,9 @@ body {
 .navbar a {
   text-decoration: none;
   color: inherit;
+}
+
+.navbar h2 {
+  color: rgb(250, 13, 13);
+  font-size: xxx-large;
 }
