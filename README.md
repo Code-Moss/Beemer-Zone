@@ -1,5 +1,5 @@
 # Beemer-Zone
-Repository for my Neocities Domain
+Repository for my [Neocities] Domain
 
 //////////
 
