@@ -1,7 +1,6 @@
 /*date of creation: 12th of October, 2022
        originally created by: Cabbage Sorter
        Analized by Gio*/
-/* M A I N  G R I D */
 
 html {
   margin: auto;
@@ -13,88 +12,7 @@ html {
   display: none;
 }
 
-@font-face {
-  font-family: "blackcasper-regular";
-  src: url("../assets/fonts/blackcasper-webfont.woff2") format("woff2"),
-    url("../assets/fonts/blackcasper-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "planetk-regular";
-  src: url("../assets/fonts/planetk-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "dotgothic16-regular";
-  src: url("../assets/fonts/dotgothic16-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "estyle-regular";
-  src: url("../assets/fonts/estyle-regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-
-@keyframes glitch-h {
-  0% {
-    text-shadow: 0.05em 0 0 rgba(150, 0, 0, 0.75),
-      -0.05em -0.025em 0 rgba(252, 248, 4, 0.75);
-  }
-  14% {
-    text-shadow: 0.05em 0 0 rgba(150, 0, 0, 0.75);
-  }
-  15% {
-    text-shadow: -0.05em -0.025em 0 rgba(150, 0, 0, 0.75);
-  }
-  49% {
-    text-shadow: -0.05em -0.025em 0 rgba(150, 0, 0, 0.75);
-  }
-  50% {
-    text-shadow: 0.025em 0.05em 0 rgba(150, 0, 0, 0.75),
-      0 -0.05em 0 rgba(44, 247, 213, 0.75);
-  }
-  99% {
-    text-shadow: 0.025em 0.05em 0 rgba(150, 0, 0, 0.75),
-      0.05em 0 0 rgba(252, 248, 4, 0.75);
-  }
-  100% {
-    text-shadow: -0.025em 0 0 rgba(150, 0, 0, 0.75) -0.025em -0.025em 0
-        rgba(252, 248, 4, 0.75),
-      -0.025em -0.05em 0 rgba(44, 247, 213, 0.75);
-  }
-}
-
-@keyframes glitch-n {
-  0% {
-    text-shadow: 0.05em 0 0 rgb(201, 142, 142);
-  }
-  14% {
-    text-shadow: 0.05em 0 0 rgb(233, 155, 11);
-  }
-  15% {
-    text-shadow: -0.08em -0.025em 0 rgb(9, 156, 175);
-  }
-  49% {
-    text-shadow: -0.05em -0.025em 0 rgb(165, 6, 6);
-  }
-  50% {
-    text-shadow: 0.025em 0.05em 0 rgb(8, 196, 108);
-  }
-  94% {
-    text-shadow: 0.065em 0.05em 0 rgb(36, 91, 194);
-  }
-  100% {
-    text-shadow: -0.025em 0 0 rgb(177, 166, 166);
-  }
-}
+/* MAIN CONTENT AND STUFF */
 
 :root {
   --background-color: black;
@@ -118,6 +36,8 @@ body {
   margin: 0 auto;
   max-width: 100%;
 }
+
+/* H E A D E R   S H I T */
 
 .header {
   margin-top: 2em;
@@ -148,6 +68,8 @@ body {
   transition: none;
 }
 
+/* GRID? TF ARE THOSE??? */
+
 .grid-container {
   display: grid;
   grid-template-rows: 700px 50px;
@@ -158,6 +80,15 @@ body {
   top: 0;
   right: 0;
   margin-right: 25%;
+}
+
+.buttons ul {
+  display: flex;
+  list-style: none;
+  background-color: black;
+  padding: 4px;
+  margin-left: 3em;
+  margin-top: 3.5em;
 }
 
 /* N A V B A R   B U S S I N E S S */
@@ -305,6 +236,11 @@ body {
   max-width: 100%;
 }
 
+.main-content a {
+  text-decoration: none;
+  color: darkred;
+}
+
 .page-updates {
   scrollbar-width: none;
   background-color: black;
@@ -338,9 +274,4 @@ body {
   border: red 1px solid;
   text-align: center;
   font-size: larger;
-}
-
-.main-content a {
-  text-decoration: none;
-  color: darkred;
 }
