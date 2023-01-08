@@ -16,7 +16,7 @@ html {
 @font-face {
   font-family: "blackcasper-regular";
   src: url("../assets/fonts/blackcasper-webfont.woff2") format("woff2"),
-       url("../assets/fonts/blackcasper-webfont.woff") format("woff");
+    url("../assets/fonts/blackcasper-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -34,6 +34,14 @@ html {
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "estyle-regular";
+  src: url("../assets/fonts/estyle-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 @keyframes glitch-h {
   0% {
@@ -90,8 +98,9 @@ html {
 
 :root {
   --background-color: black;
-  --background-image: url(/assets/videos/main_static.png);
-  font-family: "dotgothic16-regular";
+  --background-image: url("../assets/videos/main_static.png");
+  font-family: "estyle-regular";
+  text-shadow:black;
   color: #ff0f0f;
 }
 
@@ -107,18 +116,19 @@ body {
 .main {
   width: 1000px;
   margin: 0 auto;
-  max-width:100%;
+  max-width: 100%;
 }
 
 .header {
+  margin-top: 2em;
   position: static;
   font-family: "planetk-regular";
   font-size: x-large;
   padding: 5px;
   background-size: auto;
   text-shadow: 0.5em 0 0 rgba(150, 0, 0, 0.75),
-              -0.25em -0.05em 0 rgba(252, 248, 4, 0.75),
-               0.25em 0.05em 0 rgba(44, 247, 213, 0.75);
+    -0.25em -0.05em 0 rgba(252, 248, 4, 0.75),
+    0.25em 0.05em 0 rgba(44, 247, 213, 0.75);
   animation: glitch-h 128ms infinite;
 }
 
@@ -152,12 +162,34 @@ body {
 
 .navbar {
   grid-column: 1 / 1;
-  padding: auto;
+  padding: 1.8em;
+  padding-left: 0%;
+  padding-top: 0%;
+  margin-top: 1.4em;
 }
 .navbar h2 {
+  font-size: x-large;
   color: red;
-  animation: glitch-n 50ms infinite;
+  text-shadow: 0.5em 0 0 rgba(150, 0, 0, 0.75),
+    -0.25em -0.05em 0 rgba(252, 248, 4, 0.75),
+    0.25em 0.05em 0 rgba(44, 247, 213, 0.75);
+  animation: glitch-h 128ms infinite;
   text-align: left;
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bolder;
+  border: #ff0f0f solid 2px;
+  background-color: black;
+  padding: 3px;
+}
+
+.navbar h2:hover {
+  color: white;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .main-content {
@@ -170,7 +202,7 @@ body {
   overflow-x: hidden;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  animation: glitch-n 50ms infinite;
+  /* animation: glitch-n 50ms infinite; */
 }
 
 /* FOOTY BUSSINESS */
@@ -183,30 +215,37 @@ body {
 
 .footer a:hover {
   color: white;
-  animation: glitch-h 50ms infinite;
+  animation: glitch-n 50ms infinite;
 }
 
-.silly-footer {
+.silly-footer a{
   font-size: larger;
   font-weight: bold;
+  color:rgb(156, 23, 19);
 }
 
 .silly-footer a:link {
   text-decoration: none;
+  color: #ff0f0f;
 }
 
 .inspired {
   font-size: small;
-  color: red;
+  color: rgb(116, 10, 7);;
 }
 
-.inspired a:link {
+.inspired a {
+  text-decoration: none;
+  color: rgb(177, 22, 17);
+}
+
+.inspired a:hover {
   text-decoration: none;
   color: green;
- }
+}
 
- /* Gio was Here  */
- /* The poes */
+/* Gio was Here  */
+/* The poes */
 
 .navbar li {
   list-style: square;
@@ -244,9 +283,11 @@ body {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
-.welcome h1 {
+.welcome h2 {
   font-weight: lighter;
   font-family: "planetk-regular";
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
 }
 
 .main-content-img {
@@ -272,7 +313,7 @@ body {
   margin-top: -2.3em;
   margin-bottom: 1em;
   padding: 10px;
-  border: 1px solid red;
+  border: 3px solid red;
 }
 .page-updates li {
   margin-right: 5em;
@@ -299,13 +340,4 @@ body {
 .main-content a {
   text-decoration: none;
   color: darkred;
-}
-.navbar a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.navbar h2 {
-  color: rgb(250, 13, 13);
-  font-size: xxx-large;
 }
